@@ -84,10 +84,6 @@ uploadAudioFiles = async(files) => {
     });
 }
     
-
-
-
-
 addEventListeners = () => {
     uploadForm.addEventListener("submit", (e) => {
         e.preventDefault();
