@@ -62,12 +62,15 @@ app.get("/stream/:setlistName/:songTitle", function (req, res) {
 
   if (range !== undefined) {
     endBytes = stat.size - 1;
+    // res.writeHead(205,)
     res.writeHead(206, {"Content-Type": "audio/mpeg",
     "Content-Length": stat.size,
-    "Content-Range": "bytes " + 0 + "-" + endBytes + "/" + stat.size})
-    res.send();
-
-    audioReadStream = fs.createReadStream((path = audioFile), (options = { end: endBytes }));
+    "Content-Range": "bytes " + 0 + "-" + endBytes + "/" + stat.size,})
+    
+    audioReadStream = fs.createReadStream(
+      (path = audioFile),
+      (options = { end: endBytes })
+    );
   } else {
     res.header({
       "Content-Type": "audio/mpeg",
