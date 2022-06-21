@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html>
-  <script src="script.js"></script>
+  
   <head>
     <meta charset="utf-8" />
     <title>Copyright free audio</title>
@@ -9,12 +9,16 @@
 
   <body>
     <h1>Copyright free audio</h1>
-    <h2>File Browser</h2>
+    <h2>Music Browser</h2>
 
     <button onclick="loadLibrary()">Back to folders</button>
-    --
     <div id="setlist"></div>
     <div id="fileBrowser"></div>
+    <form id= "uploadForm">
+      <label for="fileUpload" class="btn">Upload track</label>
+      <input type="file" name="fileUpload"   id="fileUpload" accept="audio/mpeg">
+      <button type="submit">Submit</button>
+    </form>
       <div>
         <audio
           id="player"
@@ -27,4 +31,5 @@
         </audio>
       </div>
   </body>
+  <script src="script.js"></script>
 </html>

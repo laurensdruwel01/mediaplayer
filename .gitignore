@@ -1,1 +1,2 @@
-audio/
+audio/*
+!audio/Z_Uploads/
