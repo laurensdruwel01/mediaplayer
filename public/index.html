@@ -1,35 +1,30 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html>
-    <!-- <script src="script.js"></script> -->
-    <script src="script.js"></script>
-    <head>
-        <meta charset="utf-8">
-        <title>Copyright free audio</title>
-       
-    </head>
-    
-    <body> 
-        <h1>Copyright free audio</h1>
-        <h2>File Browser</h2>
-        <button>Back to folders</button>
- --
-        <div id="setlist"></div>
-        
-        <div style="display: flex; flex-direction: row;"> 
-            <div>
-                <div>
-                </div>
+  <script src="script.js"></script>
+  <head>
+    <meta charset="utf-8" />
+    <title>Copyright free audio</title>
+  </head>
 
-                <audio controls>
-                    <source src="horse.ogg" type="audio/ogg">
-                    <source src="horse.mp3" type="audio/mpeg">
-                  Your browser does not support the audio element.
-                  </audio>
-            </div>
+  <body>
+    <h1>Copyright free audio</h1>
+    <h2>File Browser</h2>
 
-        </div>
-    </body>
-
-
+    <button onclick="loadLibrary()">Back to folders</button>
+    --
+    <div id="setlist"></div>
+    <div id="fileBrowser"></div>
+      <div>
+        <audio
+          id="player"
+          controls
+          autoplay
+          src="http://localhost:3000/stream/Humorus_lighthearted/exploring.mp3"
+        >
+          Your browser does not support the
+          <code>audio</code> element.
+        </audio>
+      </div>
+  </body>
 </html>
